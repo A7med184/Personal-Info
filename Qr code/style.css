@@ -1,0 +1,82 @@
+/* Reset default browser padding and margin */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Container to limit max width for better responsiveness */
+.container {
+    width: 100%;
+    max-width: 600px;
+}
+.container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+/* Styling for the English section */
+.english {
+    border: 3px solid #333;
+    border-radius: 10px;
+    width: 100%;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+/* Styling for each information row */
+.english h2 {
+    font-weight: 600;
+    padding: 15px;
+    margin-left: 10px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+/* Adding border between rows except the last one */
+.english h2:not(:last-of-type) {
+    border-bottom: 1px solid #333;
+}
+
+/* Styling for icons */
+.english i {
+    border-right: 2px solid #333;
+    padding-right: 10px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 480px) {
+    .english h2 {
+        font-size: 0.9rem;
+        padding: 10px;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .english i {
+        border-right: none;
+        padding-right: 0;
+    }
+}
+
+/* Media query for tablets */
+@media (max-width: 768px) {
+    .english h2 {
+        font-size: 1rem;
+    }
+}
